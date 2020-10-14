@@ -7,12 +7,12 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author lwc
- * @date 2020/10/12 11:28
+ * @date 2020/10/14 10:37
  */
 @Configuration
 public class ApplicationContextConfig {
     @Bean
-//    @LoadBalanced
+    @LoadBalanced
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
