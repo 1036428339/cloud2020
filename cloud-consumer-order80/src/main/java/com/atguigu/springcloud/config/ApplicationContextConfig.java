@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class ApplicationContextConfig {
     @Bean
-//    @LoadBalanced
+    @LoadBalanced//只有@loadBalance注解修饰的restTemplate才能实现服务名的调用，没有修饰的restTemplate是没有该功能的。
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
